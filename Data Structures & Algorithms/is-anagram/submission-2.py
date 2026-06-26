@@ -1,0 +1,8 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        sa, ta = [0]*26, [0]*26
+        for c in s:
+            sa[ord(c) - ord('a')] += 1
+        for c in t:
+            ta[ord(c) - ord('a')] += 1
+        return sa == ta
